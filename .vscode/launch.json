@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "fromt-mail",
+            "url": "http://localhost:4200",
+            "webRoot": "${workspaceFolder}/angular-mail-frontend"
+        },
+        {
+            "type": "java",
+            "name": "back-mail",
+            "request": "launch",
+            "mainClass": "com.sekhanov.springmailbackend.DemoApplication",
+            "projectName": "spring-mail-backend"
+        }
+
+    ]
+}
