@@ -27,8 +27,7 @@ public class DemoApplicationTests {
         mailMessage.setSubject("hello!");
         mailMessage.setToEmails("skhanov@mail.ru");
 		mailMessage.setTextMessage("bla bla bla");
-		
-		mailService.sendMail(mailMessage);
+		mailService.sendMail(mailMessage);	
 	}
 
 
