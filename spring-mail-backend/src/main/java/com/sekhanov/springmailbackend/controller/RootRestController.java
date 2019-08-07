@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class RootRestController {
 
     @GetMapping
-    public String rootMessage() {
+    public String rootMessage() {        
         return "This is root of backend mail";
     }
 }
