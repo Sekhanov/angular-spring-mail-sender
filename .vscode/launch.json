@@ -1,6 +1,13 @@
 {
     "configurations": [
         {
+            "type": "java",
+            "name": "CodeLens (Launch) - MailBackModule",
+            "request": "launch",
+            "mainClass": "com.sekhanov.springmailbackend.MailBackModule",
+            "projectName": "spring-mail-backend"
+        },
+        {
             "type": "chrome",
             "request": "launch",
             "name": "fromt-mail",
@@ -14,6 +21,5 @@
             "mainClass": "com.sekhanov.springmailbackend.DemoApplication",
             "projectName": "spring-mail-backend"
         }
-
     ]
 }

@@ -1,6 +1,6 @@
 package com.sekhanov.springmailbackend;
 
-import com.sekhanov.springmailbackend.dta.MailMessage;
+import com.sekhanov.springmailbackend.dto.MailMessage;
 import com.sekhanov.springmailbackend.service.MailService;
 
 import org.junit.Test;
@@ -17,7 +17,7 @@ public class DemoApplicationTests {
 	private MailService mailService;
 
 	@Test
-	public void contextLoads() {
+	public void contextLoads() {	
 	}
 
 	@Test

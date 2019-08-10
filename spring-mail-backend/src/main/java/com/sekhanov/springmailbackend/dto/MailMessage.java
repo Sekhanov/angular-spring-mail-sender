@@ -1,4 +1,4 @@
-package com.sekhanov.springmailbackend.dta;
+package com.sekhanov.springmailbackend.dto;
 
 import javax.validation.constraints.NotBlank;
 
@@ -11,7 +11,7 @@ public class MailMessage {
     private String fromEmail;
     // @Emails
     @NotBlank(message = "field cant be blank")
-    private String toEmails;
+    private String toEmail;
     @NotBlank(message = "field cant be blank")
     private String textMessage;
 
@@ -32,11 +32,11 @@ public class MailMessage {
     }
 
     public String getToEmails() {
-        return toEmails;
+        return toEmail;
     }
 
     public void setToEmails(String toEmails) {
-        this.toEmails = toEmails;
+        this.toEmail = toEmails;
     }
 
     public String getTextMessage() {

@@ -6,7 +6,7 @@ import java.util.List;
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 
-import com.sekhanov.springmailbackend.dta.MailMessage;
+import com.sekhanov.springmailbackend.dto.MailMessage;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
