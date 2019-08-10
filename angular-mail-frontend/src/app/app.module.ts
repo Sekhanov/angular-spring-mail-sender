@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { DxButtonModule } from 'devextreme-angular';
+import { DxButtonModule, DxHtmlEditorModule, DxMapModule } from 'devextreme-angular';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,10 @@ import { DxButtonModule } from 'devextreme-angular';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DxButtonModule
+    DxButtonModule,
+    DxHtmlEditorModule,
+    DxMapModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

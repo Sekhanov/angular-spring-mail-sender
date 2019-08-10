@@ -18,5 +18,11 @@
   </li>
   <dx-button>hello!</dx-button>
 </ul>
-
+<dx-html-editor valueType="html"> <!-- or "markdown" -->
+  <dxo-toolbar [items]="[ 'bold', 'italic', 'alignRight', 'alignLeft' ]"></dxo-toolbar>
+    <p>
+        DevExtreme HtmlEditor is a WYSIWYG text editor that allows its users to format
+        textual and visual content and store it as HTML or Markdown.
+    </p>
+</dx-html-editor>
 <router-outlet></router-outlet>
