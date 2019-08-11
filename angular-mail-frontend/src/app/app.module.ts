@@ -5,10 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { DxButtonModule, DxHtmlEditorModule, DxMapModule } from 'devextreme-angular';
+import { CustomWysiwygComponent } from './custom-wysiwyg/custom-wysiwyg.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    CustomWysiwygComponent,
 
   ],
   imports: [
