@@ -4,21 +4,24 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { DxButtonModule, DxHtmlEditorModule, DxMapModule } from 'devextreme-angular';
-import { CustomWysiwygComponent } from './custom-wysiwyg/custom-wysiwyg.component';
+import {ToastModule} from 'primeng/toast';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PrimeToastsComponent } from './prime-toasts/prime-toasts.component';
+import {EditorModule} from 'primeng/editor';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CustomWysiwygComponent,
-
+    PrimeToastsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DxButtonModule,
-    DxHtmlEditorModule,
-    DxMapModule
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastModule,
+    EditorModule
 
   ],
   providers: [],

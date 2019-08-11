@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CustomWysiwygComponent } from './custom-wysiwyg.component';
+import { PrimeToastsComponent } from './prime-toasts.component';
 
-describe('CustomWysiwygComponent', () => {
-  let component: CustomWysiwygComponent;
-  let fixture: ComponentFixture<CustomWysiwygComponent>;
+describe('PrimeToastsComponent', () => {
+  let component: PrimeToastsComponent;
+  let fixture: ComponentFixture<PrimeToastsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CustomWysiwygComponent ]
+      declarations: [ PrimeToastsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CustomWysiwygComponent);
+    fixture = TestBed.createComponent(PrimeToastsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

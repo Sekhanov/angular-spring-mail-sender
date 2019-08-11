@@ -1,3 +1,7 @@
 
-<app-custom-wysiwyg></app-custom-wysiwyg>
+<button (click)="primeToasts.showToast()">show to</button>
+
+<app-prime-toasts #primeToasts></app-prime-toasts>
+<p-editor [(ngModel)]="editorText" [style]="{'height':'320px'}"></p-editor>
+<p> {{editorText}} </p>
 <router-outlet></router-outlet>
