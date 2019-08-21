@@ -18,7 +18,12 @@ export class AppComponent {
 
 
   sendMail() {
-    const mailMessage: MailMessage = {textMessage: this.editorText};
+    const mailMessage: MailMessage = {
+      textMessage: this.editorText,
+      subject: 'my new message',
+      fromEmail: 's.khanov@agroexpert2007.ru',
+      toEmail: 'sekhanov@gmail.com'
+    };
     this.mailHttpService.sendMessage(mailMessage).subscribe();
   }
 
