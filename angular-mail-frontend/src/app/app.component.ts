@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { MessageService } from 'primeng/api';
+import { MailHttpService } from './mail-http.service';
+import { MailMessage } from './mail-message';
 
 
 @Component({
@@ -12,12 +14,13 @@ export class AppComponent {
 
   editorText: string;
 
-  constructor(private messageService: MessageService) {}
+  constructor(private mailHttpService: MailHttpService) {}
 
-  showToast() {
-    this.messageService.add({severity: 'success', summary: 'Service Message', detail: 'Via MessageService'});
+
+  sendMail() {
+    const mailMessage: MailMessage = {textMessage: this.editorText};
+    this.mailHttpService.sendMessage(mailMessage).subscribe();
   }
-
 
 
 }

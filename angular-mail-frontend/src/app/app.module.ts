@@ -9,6 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PrimeToastsComponent } from './prime-toasts/prime-toasts.component';
 import {EditorModule} from 'primeng/editor';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     BrowserAnimationsModule,
     ToastModule,
-    EditorModule
+    EditorModule,
+    HttpClientModule
 
   ],
   providers: [],
