@@ -12,7 +12,8 @@
             "name": "back-mail",
             "request": "launch",
             "mainClass": "com.sekhanov.springmailbackend.MailBackModule",
-            "projectName": "spring-mail-backend"
+            "projectName": "spring-mail-backend",
+            "console": "internalConsole"
         }
     ]
 }

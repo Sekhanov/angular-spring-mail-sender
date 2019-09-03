@@ -2,17 +2,20 @@ package com.sekhanov.springmailbackend.dto;
 
 import javax.validation.constraints.NotBlank;
 
+import com.sekhanov.springmailbackend.validation.Emails;
+
 
 
 public class MailMessage {
 
-    @NotBlank(message = "field cant be blank")
+    @NotBlank(message = "field 'subject' cant be blank")
     private String subject;
+    @NotBlank(message = "field 'fromEmail' cant be blank")
     private String fromEmail;
-    // @Emails
-    @NotBlank(message = "field cant be blank")
+    @Emails
+    @NotBlank(message = "field 'toEmail' cant be blank")
     private String toEmail;
-    @NotBlank(message = "field cant be blank")
+    @NotBlank(message = "field 'textMessage' cant be blank")
     private String textMessage;
     
 

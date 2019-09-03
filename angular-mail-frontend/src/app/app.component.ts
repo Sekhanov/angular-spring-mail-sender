@@ -21,8 +21,8 @@ export class AppComponent {
     const mailMessage: MailMessage = {
       textMessage: this.editorText,
       subject: 'my new message',
-      fromEmail: 's.khanov@agroexpert2007.ru',
-      toEmail: 'sekhanov@gmail.com'
+      fromEmail: 'skhanov@mail.ru',
+      toEmail: 's.khanov@agroexpert2007.ru'
     };
     this.mailHttpService.sendMessage(mailMessage).subscribe();
   }
