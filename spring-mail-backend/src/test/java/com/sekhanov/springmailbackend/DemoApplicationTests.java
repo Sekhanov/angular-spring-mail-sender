@@ -25,7 +25,7 @@ public class DemoApplicationTests {
 		MailMessage mailMessage = new MailMessage();
         mailMessage.setFromEmail("s.khanov@agroexpert2007.ru");
         mailMessage.setSubject("hello!");
-        mailMessage.setToEmail("sekhanov@gmail.com");
+        mailMessage.setToEmailList("sekhanov@gmail.com");
 		mailMessage.setTextMessage("bla bla bla");
 		mailService.sendMail(mailMessage);	
 	}

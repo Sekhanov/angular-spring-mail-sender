@@ -14,7 +14,7 @@ public class MailMessage {
     private String fromEmail;
     @Emails
     @NotBlank(message = "field 'toEmail' cant be blank")
-    private String toEmail;
+    private String toEmailList;
     @NotBlank(message = "field 'textMessage' cant be blank")
     private String textMessage;
     
@@ -48,20 +48,6 @@ public class MailMessage {
     }
 
     /**
-     * @return String return the toEmail
-     */
-    public String getToEmail() {
-        return toEmail;
-    }
-
-    /**
-     * @param toEmail the toEmail to set
-     */
-    public void setToEmail(String toEmail) {
-        this.toEmail = toEmail;
-    }
-
-    /**
      * @return String return the textMessage
      */
     public String getTextMessage() {
@@ -73,6 +59,21 @@ public class MailMessage {
      */
     public void setTextMessage(String textMessage) {
         this.textMessage = textMessage;
+    }
+    
+
+    /**
+     * @return String return the toEmailList
+     */
+    public String getToEmailList() {
+        return toEmailList;
+    }
+
+    /**
+     * @param toEmailList the toEmailList to set
+     */
+    public void setToEmailList(String toEmailList) {
+        this.toEmailList = toEmailList;
     }
 
 }

@@ -1,11 +1,17 @@
-<p>hello from mail component</p>
+<p>mail component</p>
 
 <button (click)="primeToasts.showToast()">show to</button>
-
 <app-prime-toasts #primeToasts></app-prime-toasts>
-<textarea formControlName="mailList"></textarea>
-<input placeholder="subject" type="text">
-<p-editor [(ngModel)]="editorText" [style]="{'height':'320px'}"></p-editor>
+
+<form [formGroup]="mailMessageForm">
+  <textarea placeholder="toEmailList" formControlName="toEmailList" name="toEmailList" cols="30" rows="10" [(ngModel)]="mailMessage.toEmailList"></textarea>
+  <input placeholder="subject" type="text" formControlName="subject" [(ngModel)]="mailMessage.subject">
+  <p-editor formControlName="textMessage" [style]="{'height':'320px'}" [(ngModel)]="mailMessage.textMessage"></p-editor>
+</form>
+
+<p> {{mailMessageForm.value | json}} </p>
+<p> {{mailMessage | json}} </p>
+
 <br>
 <button (click)="sendMail()">sendMail</button>
-<p> {{editorText}} </p>
+
