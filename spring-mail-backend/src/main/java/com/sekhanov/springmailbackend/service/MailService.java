@@ -1,8 +1,5 @@
 package com.sekhanov.springmailbackend.service;
 
-
-import java.util.List;
-
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 
@@ -18,37 +15,28 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class MailService {
-    
+
     @Autowired
     private JavaMailSender javaMailSender;
 
     public void sendMail(MailMessage mailMessage) {
+        String[] toEmails = mailMessage.getToEmailList().split("\\n");
         MimeMessage message = javaMailSender.createMimeMessage();
+        MimeMessageHelper messageHelper = null;
         try {
-            MimeMessageHelper messageHelper = new MimeMessageHelper(message, true);
-            messageHelper.setTo(mailMessage.getToEmailList());
+            messageHelper = new MimeMessageHelper(message, true);
             messageHelper.setSubject(mailMessage.getSubject());
-            messageHelper.setFrom(mailMessage.getFromEmail());
             messageHelper.setText(mailMessage.getTextMessage(), true);
-        } catch (MessagingException e) {
-            e.printStackTrace();
+            for (String s : toEmails) {
+                messageHelper.setTo(s);
+                javaMailSender.send(message);
+                Thread.sleep(5000);
+            }
+        } catch (MessagingException | InterruptedException e1) {
+            e1.printStackTrace();
         }
-        javaMailSender.send(message);
+
+        
     }
 
-    /**
-     * 
-     * @param mailMessage - массив сообщений 
-     * @param timeout
-     */
-    public void sendMails(List<MailMessage> mailMessages, Integer timeout) {
-        for (MailMessage mailMessage : mailMessages) {            
-            try {
-                sendMail(mailMessage);
-                Thread.sleep(timeout);
-            } catch (InterruptedException e) {                
-                e.printStackTrace();
-            }
-        }
-    } 
 }
